@@ -3,65 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>靽??舀憛?Tetris</title>
+  <title>俄羅斯方塊 Tetris</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="game-shell">
-    <section class="play-area" aria-label="靽??舀憛??脣?">
+    <section class="play-area" aria-label="俄羅斯方塊遊戲區">
       <div class="brand-row">
         <p class="eyebrow">Tetris Mini Game</p>
-        <button id="pauseButton" class="icon-button" type="button" aria-label="?怠??" title="?怠?/蝜潛?">II</button>
+        <button id="pauseButton" class="icon-button" type="button" aria-label="暫停遊戲" title="暫停/繼續">II</button>
       </div>
-      <h1>靽??舀憛?/h1>
-      <canvas id="board" width="300" height="600" aria-label="?璉"></canvas>
-      <div class="touch-controls" aria-label="閫豢??">
-        <button type="button" data-action="left" aria-label="?椰">??/button>
-        <button type="button" data-action="rotate" aria-label="??">??/button>
-        <button type="button" data-action="right" aria-label="?">??/button>
-        <button type="button" data-action="down" aria-label="????>??/button>
+      <h1>俄羅斯方塊</h1>
+      <canvas id="board" width="300" height="600" aria-label="遊戲棋盤"></canvas>
+      <div class="touch-controls" aria-label="觸控操作">
+        <button type="button" data-action="left" aria-label="向左">←</button>
+        <button type="button" data-action="rotate" aria-label="旋轉">⟳</button>
+        <button type="button" data-action="right" aria-label="向右">→</button>
+        <button type="button" data-action="down" aria-label="加速下降">↓</button>
       </div>
     </section>
 
-    <aside class="side-panel" aria-label="?鞈?">
+    <aside class="side-panel" aria-label="遊戲資訊">
       <div class="stat-grid">
         <div>
-          <span>?</span>
+          <span>分數</span>
           <strong id="score">0</strong>
         </div>
         <div>
-          <span>銵</span>
+          <span>行數</span>
           <strong id="lines">0</strong>
         </div>
         <div>
-          <span>蝑?</span>
+          <span>等級</span>
           <strong id="level">1</strong>
         </div>
       </div>
 
       <div class="next-box">
-        <span>銝???/span>
-        <canvas id="next" width="120" height="120" aria-label="銝??憛?></canvas>
+        <span>下一個</span>
+        <canvas id="next" width="120" height="120" aria-label="下一個方塊"></canvas>
       </div>
 
       <div class="command-row">
-        <button id="startButton" class="primary-button" type="button">???</button>
-        <button id="restartButton" class="secondary-button" type="button">???</button>
+        <button id="startButton" class="primary-button" type="button">開始遊戲</button>
+        <button id="restartButton" class="secondary-button" type="button">重新開始</button>
       </div>
 
       <dl class="keys">
-        <div><dt>????/dt><dd>撌血蝘餃?</dd></div>
-        <div><dt>??/ 蝛箇??/dt><dd>??</dd></div>
-        <div><dt>??/dt><dd>????/dd></div>
-        <div><dt>P</dt><dd>?怠?</dd></div>
+        <div><dt>← →</dt><dd>左右移動</dd></div>
+        <div><dt>↑ / 空白鍵</dt><dd>旋轉</dd></div>
+        <div><dt>↓</dt><dd>加速下降</dd></div>
+        <div><dt>P</dt><dd>暫停</dd></div>
       </dl>
     </aside>
   </main>
 
   <div id="overlay" class="overlay is-visible">
     <div class="overlay-card">
-      <p id="overlayTitle">皞???</p>
-      <span id="overlayText">??憪??脯? Enter ????/span>
+      <p id="overlayTitle">準備開始</p>
+      <span id="overlayText">按「開始遊戲」或 Enter 開始。</span>
     </div>
   </div>
 
