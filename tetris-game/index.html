@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>靽??舀憛?Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="play-area" aria-label="靽??舀憛??脣?">
+      <div class="brand-row">
+        <p class="eyebrow">Tetris Mini Game</p>
+        <button id="pauseButton" class="icon-button" type="button" aria-label="?怠??" title="?怠?/蝜潛?">II</button>
+      </div>
+      <h1>靽??舀憛?/h1>
+      <canvas id="board" width="300" height="600" aria-label="?璉"></canvas>
+      <div class="touch-controls" aria-label="閫豢??">
+        <button type="button" data-action="left" aria-label="?椰">??/button>
+        <button type="button" data-action="rotate" aria-label="??">??/button>
+        <button type="button" data-action="right" aria-label="?">??/button>
+        <button type="button" data-action="down" aria-label="????>??/button>
+      </div>
+    </section>
+
+    <aside class="side-panel" aria-label="?鞈?">
+      <div class="stat-grid">
+        <div>
+          <span>?</span>
+          <strong id="score">0</strong>
+        </div>
+        <div>
+          <span>銵</span>
+          <strong id="lines">0</strong>
+        </div>
+        <div>
+          <span>蝑?</span>
+          <strong id="level">1</strong>
+        </div>
+      </div>
+
+      <div class="next-box">
+        <span>銝???/span>
+        <canvas id="next" width="120" height="120" aria-label="銝??憛?></canvas>
+      </div>
+
+      <div class="command-row">
+        <button id="startButton" class="primary-button" type="button">???</button>
+        <button id="restartButton" class="secondary-button" type="button">???</button>
+      </div>
+
+      <dl class="keys">
+        <div><dt>????/dt><dd>撌血蝘餃?</dd></div>
+        <div><dt>??/ 蝛箇??/dt><dd>??</dd></div>
+        <div><dt>??/dt><dd>????/dd></div>
+        <div><dt>P</dt><dd>?怠?</dd></div>
+      </dl>
+    </aside>
+  </main>
+
+  <div id="overlay" class="overlay is-visible">
+    <div class="overlay-card">
+      <p id="overlayTitle">皞???</p>
+      <span id="overlayText">??憪??脯? Enter ????/span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
