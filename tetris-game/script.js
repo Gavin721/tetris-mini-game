@@ -290,7 +290,7 @@ function togglePause() {
   if (!running || gameOver) return;
   paused = !paused;
   if (paused) {
-    showOverlay("撌脫??, "??P ????匱蝥?);
+    showOverlay("已暫停", "按 P 或暫停按鈕繼續。");
   } else {
     hideOverlay();
     lastTime = performance.now();
@@ -301,7 +301,7 @@ function togglePause() {
 function endGame() {
   running = false;
   gameOver = true;
-  showOverlay("?蝯?", `敺? ${score}嚗????圈?憪??拐?甈～);
+  showOverlay("遊戲結束", `得分 ${score}，按「重新開始」再玩一次。`);
 }
 
 function update(time = 0) {
